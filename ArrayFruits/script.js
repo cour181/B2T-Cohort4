@@ -1,6 +1,6 @@
 
 function addFruit(){
-	let fruitFront = prompt ("Please Enter New fruit");
+	let fruitFront = prompt ("Please Enter New fruit").toLowerCase();
 //	console.log(fruit);
 	fruit.unshift(fruitFront);
 //	console.log(fruit);
