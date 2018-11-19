@@ -2,61 +2,79 @@
 <html>
 	<title>Final Project</title>
 	<head>
+	<style>
+		header
+		{
+	    background-color:#ffffff;
+		}
+		</style>
  
 
 	<script>
 
 		function load_text(){
-		document.getElementById("output").value = "Text...";
+		document.getElementById("textArea").innerHTML = "";
 
 	}
 
 		function clearTextArea() {
-		document.getElementById("output").value = "";
+		document.getElementById("textArea").value = "";
 
 	}
 
 		function bold_click(){
-		document.getElementById("output").style.font.weight = "Bold";
+		document.getElementById("textArea").style.font.weight = "Bold";
 
 	}
 
 		function underline_click(){
-		document.getElementById("output").style.font.decoration = "Underline";
+		document.getElementById("textArea").style.font.decoration = "Underline";
 
 	}
 
 		function italic_click(){
-		document.getElementById("output").style.font.style = "Italic";
+		document.getElementById("textArea").style.font.style = "Italic";
 	}
 	 
 
-	</script>>
+	</script>
 
-	</head>>
+	</head>
 
 	 
 
-	<body onload="load_text()">
+	<body onload="load_text()"><h1 style="color: yellow; background-color: green; width: 1310px">Note Pad</h1>
 
 	<form NAME="controls" ID="controls">
 		<select style="WIDTH: 610px">
-			<option>Select---->Font</option>>
-			<option>Arial Black</option>>
+			<option>Select---->Font</option>
+			<option>Arial Black</option>
 			<option>Sarif</option>
 			<option>San-Sarif</option>
 		</select>
-		<input id="button1" type="button" value="B" name="button1" style="FONT-WEIGHT: bold; WIDTH: 56px; HEIGHT: 54px" size="28" onclick="bold_click()">
-		<input type="button" value="I" style="WIDTH: 55px; FONT-STYLE: italic; HEIGHT: 54px" size="50" onclick="italic_click()">
-		<input id="button1" style="WIDTH: 56px; HEIGHT: 54px; TEXT-DECORATION: underline" type="button" size="18" value="U" name="button1" onclick="underline_click()">
-		<br/><textarea style="WIDTH: 1299px; HEIGHT: 282px" name="output" rows="9" wrap="virtual" cols=48></textarea>><br>
+		<input id="button1" type="button" value="B" name="button1" style="font-weight: bold; width: 56px; height: 54px" size="28" onclick="bold_click()">
+		<input type="button" value="I" style="width: 55px; font-style: italic; height: 54px" size="50" onclick="italic_click()">
+		<input id="button1" style="width: 56px; height: 54px; text-decoration: underline" type="button" size="18" value="U" name="button1" onclick="underline_click()">
+		<br/>
+		<textarea id="textArea" style="width: 1299px; height: 282px border: purple" name="output" rows="9" wrap="virtual" cols=48>
+			
+		</textarea>
+		<br>
 		<p align="left"><input TYPE="button" VALUE="Clear" onclick="clearTextArea()"></p>
+		<input TYPE="button" VALUE="Add Data from textarea" onclick="myTextArea()"></p>
 	</FORM>
+
 		<h1 id="addNotes"></h1>
+		<h1 id="display"></h1>
 
 		<input type="button" name="notes" value="Add Notes" onclick="addNotesForm()">
+		<div><hr></div>
+		<div> <h3>Saved Notes:</h3></div>
+		<div id="results"></div>
+		<div id="vet"></div>
+
 		<script src="script.js"></script>
-		<t.style.backgroundColor='blue';>
+
 	</body>
 
 	</html>
